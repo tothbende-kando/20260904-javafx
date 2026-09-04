@@ -75,7 +75,7 @@ public class Student {
         return height_cm;
     }
 
-    public Student(int id, String knev, String vnev, char gender, String schoolclass, String birthdate, String placeOfLiving, int height_cm) {
+    public Student(int id, String vnev, String knev, char gender, String schoolclass, String birthdate, String placeOfLiving, int height_cm) {
         this.id = id;
         this.knev = knev;
         this.vnev = vnev;

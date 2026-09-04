@@ -65,6 +65,7 @@ public class DiakController {
         Student[] matches = new Student[] {};
 
         for (Student student : students.getStudents()) {
+            System.out.println(student.getKnev());
             if (filter.is_matched(student)) {
                 matches = Students.append_student_to_array(student, matches);
             }
