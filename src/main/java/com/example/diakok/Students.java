@@ -4,6 +4,7 @@ package com.example.diakok;
 import java.io.BufferedReader;
 import java.io.EOFException;
 import java.io.InputStreamReader;
+import java.util.Objects;
 
 
 public class Students {
@@ -21,10 +22,6 @@ public class Students {
         students = new Student[200];
     }
 
-    public Students(int length) {
-        students = new Student[length];
-    }
-
     public Students(Student[] students) {
         this.students = students;
     }
@@ -40,7 +37,7 @@ public class Students {
 
         try {
             // I love java
-            InputStreamReader file = new InputStreamReader(Students.class.getResourceAsStream(filename));
+            InputStreamReader file = new InputStreamReader(Objects.requireNonNull(Students.class.getResourceAsStream(filename)));
             BufferedReader student_file = new BufferedReader(file);
 
             String line = student_file.readLine();
