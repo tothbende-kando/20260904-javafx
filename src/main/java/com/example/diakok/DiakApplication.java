@@ -3,6 +3,7 @@ package com.example.diakok;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -14,6 +15,7 @@ public class DiakApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 960, 540);
         stage.setTitle("Hello!");
         stage.setScene(scene);
+        stage.getIcons().add(new Image("file:diak.png"));
         stage.show();
     }
 
