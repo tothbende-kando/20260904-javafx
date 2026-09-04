@@ -74,7 +74,9 @@ public class Students {
     }
 
 
-    private static Student[] append_student_to_array(Student new_student, Student[] base_array) {
+    // Nem szép itt ez a public de kellett DiakControllerbe és biztos nem írom le ugyanazt a kódot máshova
+    // Tudom tudom, Utils.java => append_to_array() generic típusokkal, de lusta vagyok
+    public static Student[] append_student_to_array(Student new_student, Student[] base_array) {
         Student[] extended = new Student[base_array.length + 1];
 
         // IntelliJ auto-suggestion, nem is olyan rossz ötlet (nyilván csak az*után*, hogy megírtam a for-t)

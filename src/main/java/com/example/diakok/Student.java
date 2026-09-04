@@ -6,7 +6,7 @@ public class Student {
     private String vnev;
     private char gender;
     private String schoolclass;
-    private String date;
+    private String birthdate;
     private String placeOfLiving;
     private int height_cm;
 
@@ -51,12 +51,12 @@ public class Student {
         return schoolclass;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setBirthdate(String birthdate) {
+        this.birthdate = birthdate;
     }
 
-    public String getDate() {
-        return date;
+    public String getBirthdate() {
+        return birthdate;
     }
 
     public void setPlaceOfLiving(String placeOfLiving) {
@@ -75,14 +75,19 @@ public class Student {
         return height_cm;
     }
 
-    public Student(int id, String knev, String vnev, char gender, String schoolclass, String date, String placeOfLiving, int height_cm) {
+    public Student(int id, String knev, String vnev, char gender, String schoolclass, String birthdate, String placeOfLiving, int height_cm) {
         this.id = id;
         this.knev = knev;
         this.vnev = vnev;
         this.gender = gender;
         this.schoolclass = schoolclass;
-        this.date = date;
+        this.birthdate = birthdate;
         this.placeOfLiving = placeOfLiving;
         this.height_cm = height_cm;
+    }
+
+    @Override
+    public String toString() {
+        return vnev + " " + knev + ", " + schoolclass + " (" + placeOfLiving + " " + birthdate + ", " + height_cm + " cm)";
     }
 }
