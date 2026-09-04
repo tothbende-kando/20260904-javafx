@@ -3,7 +3,7 @@ package com.example.diakok;
 import javafx.fxml.FXML;
 
 public class DiakController {
-    private Students students;
+    private final Students students = new Students(Students.loadFromFile("/com/example/diakok/diakok.csv"));;
 
     @FXML
     protected void onSaveButtonClick() {

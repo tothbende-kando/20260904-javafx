@@ -10,6 +10,7 @@ public class Student {
     private String placeOfLiving;
     private int height_cm;
 
+
     public void setId(int id) {
         this.id = id;
     }
@@ -72,5 +73,16 @@ public class Student {
 
     public int getHeight_cm() {
         return height_cm;
+    }
+
+    public Student(int id, String knev, String vnev, char gender, String schoolclass, String date, String placeOfLiving, int height_cm) {
+        this.id = id;
+        this.knev = knev;
+        this.vnev = vnev;
+        this.gender = gender;
+        this.schoolclass = schoolclass;
+        this.date = date;
+        this.placeOfLiving = placeOfLiving;
+        this.height_cm = height_cm;
     }
 }
