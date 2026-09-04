@@ -1,7 +1,6 @@
 package com.example.diakok;
 
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 
@@ -17,6 +16,7 @@ public class DiakController {
 
     @FXML
     private ListView<String> people_list;
+
 
     @FXML
     protected void onSaveButtonClick() {
@@ -40,11 +40,13 @@ public class DiakController {
         }
     }
 
+
     @FXML
     protected void onEveryoneButtonClick() {
         current_content = query_students_by_filter((Student _) -> true);
         people_list.setItems(FXCollections.observableArrayList(current_content));
     }
+
 
     @FXML
     protected void onSandorButtonClick() {
@@ -52,11 +54,13 @@ public class DiakController {
         people_list.setItems(FXCollections.observableArrayList(current_content));
     }
 
+
     @FXML
     protected void onKecskemetButtonClick() {
         current_content = query_students_by_filter((Student student) -> student.getPlaceOfLiving().equals("Kecskemét"));
         people_list.setItems(FXCollections.observableArrayList(current_content));
     }
+
 
     @FXML
     protected void onFrom1996Click() {
@@ -64,11 +68,13 @@ public class DiakController {
         people_list.setItems(FXCollections.observableArrayList(current_content));
     }
 
+
     @FXML
     protected void onPartOf10AButtonClick() {
         current_content = query_students_by_filter((Student student) -> student.getSchoolclass().equals("10/A"));
         people_list.setItems(FXCollections.observableArrayList(current_content));
     }
+
 
     private String[] query_students_by_filter(StudentFilter filter) {
         Student[] matches = new Student[] {};
