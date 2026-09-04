@@ -49,6 +49,7 @@ public class DiakController {
         ObservableList<String> content = FXCollections.observableArrayList(
                 filter_people_into_array((Student student) -> student.getBirthdate().startsWith("1996"))
         );
+        people_list.setItems(content);
     }
 
     @FXML
@@ -56,6 +57,7 @@ public class DiakController {
         ObservableList<String> content = FXCollections.observableArrayList(
                 filter_people_into_array((Student student) -> student.getSchoolclass().equals("10/A"))
         );
+        people_list.setItems(content);
     }
 
     private String[] filter_people_into_array(StudentFilter filter) {
