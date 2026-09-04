@@ -3,6 +3,7 @@ package com.example.diakok;
 import javafx.fxml.FXML;
 
 public class DiakController {
+    private Students students;
 
     @FXML
     protected void onSaveButtonClick() {
